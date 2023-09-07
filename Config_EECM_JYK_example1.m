@@ -68,6 +68,7 @@ clear OCV
 
 
 
+clc
 
 
 
