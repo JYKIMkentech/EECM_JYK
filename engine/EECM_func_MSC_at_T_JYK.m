@@ -1,7 +1,7 @@
-function [IntVar] = EECM_func_MSC_at_T(T_now, IntVar, Config)
+function [IntVar] = EECM_func_MSC_at_T_JYK(T_now, IntVar, Config)% input : T_now, IntVar, Config , output : IntVar
 
-    MSC_T_select = floor(T_now);
-    IntVar.T_tier = 0;
+    MSC_T_select = floor(T_now); % 온도 내림으로 반올림으로 정수로 반환
+    IntVar.T_tier = 0;% T_tier = 0으로 초기화 
     
     for ii = 1:size(IntVar.T_bucket_now,1)
         if MSC_T_select >= IntVar.T_bucket_now(ii,1) && MSC_T_select < IntVar.T_bucket_now(ii,2)
